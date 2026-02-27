@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Talapker Navigator — умный навигатор для абитуриентов Казахстана. Помогаем выбрать специальность, рассчитать шансы на грант ЕНТ и поступить в вуз мечты." />
+    <meta property="og:title" content="Talapker Navigator — Навигатор абитуриента Казахстана" />
+    <meta property="og:description"
+        content="Профдиагностика, аналитика ЕНТ, подача документов и сопровождение до зачисления." />
+    <title>Talapker Navigator — Болашаққа жол сілтеуші</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" id="nav-logo-link">
+                <div class="logo-icon">
+                    <img src="assets/logo.png" alt="Talapker Navigator" class="logo-img" />
+                </div>
+                <span class="logo-text">Talapker <span class="logo-accent">Navigator</span></span>
+            </a>
+            <nav class="nav-links" id="nav-links">
+                <a href="#features" class="nav-link">Возможности</a>
+                <a href="#audience" class="nav-link">Кому подходит</a>
+                <a href="#universities" class="nav-link">Вузы</a>
+                <a href="#pricing" class="nav-link">Услуги и цены</a>
+                <a href="#how-it-works" class="nav-link">Как это работает</a>
+                <a href="#contact" class="nav-link">Контакты</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#pricing" class="btn btn-outline btn-sm" id="nav-price-btn">Прайс-лист</a>
+                <a href="#contact" class="btn btn-primary btn-sm" id="nav-cta-btn">Записаться</a>
+                <div class="nav-utils">
+                    <div class="lang-switcher" id="lang-switcher">
+                        <button class="lang-btn" id="btn-kz" data-lang="kz">ҚАЗ</button>
+                        <button class="lang-btn active" id="btn-ru" data-lang="ru">РУС</button>
+                    </div>
+                    <div class="nav-divider"></div>
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Смените тему"
+                        title="Светлая/Тёмная тема">☀️</button>
+                </div>
+                <button class="burger" id="burger-btn" aria-label="Меню">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+            <canvas id="particles-canvas"></canvas>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge" id="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span id="hero-badge-text">🇰🇿 Навигатор абитуриента Казахстана</span>
+                </div>
+                <p class="hero-greeting" id="hero-greeting">Привет, Талапкер!</p>
+                <h1 class="hero-title" id="hero-main-title">
+                    Твой компас<br />
+                    в мире <span class="gradient-text">ЕНТ и грантов</span><br />
+                    Казахстана
+                </h1>
+                <p class="hero-subtitle" id="hero-subtitle">
+                    Talapker Navigator — это экспертная платформа, которая помогает выпускникам школ выбрать
+                    специальность, рассчитать шансы на грант и пройти путь от заявки до зачисления.
+                </p>
+                <div class="hero-actions">
+                    <a href="#pricing" class="btn btn-primary btn-lg" id="hero-price-btn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 2L12.5 8.5L19 10L12.5 11.5L10 18L7.5 11.5L1 10L7.5 8.5L10 2Z"
+                                fill="currentColor" />
+                        </svg>
+                        Посмотреть услуги
+                    </a>
+                    <a href="#how-it-works" class="btn btn-ghost btn-lg" id="hero-learn-btn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M7.5 10L9.5 12L12.5 8" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                        Как мы помогаем
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="stat-number">120+</span>
+                        <span class="stat-label">Вузов в базе</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Специальностей</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="stat-number">92%</span>
+                        <span class="stat-label">Поступили на грант</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-wrapper">
+                    <img src="assets/hero_illustration.png" alt="Talapker Navigator — компас для абитуриента"
+                        class="hero-image" id="hero-img" />
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" id="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Прокрути вниз</span>
+        </div>
+    </section>
+
+    <!-- ═══════════ FEATURES ═══════════ -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Модули платформы</p>
+                <h2 class="section-title">Всё необходимое<br />в одном месте</h2>
+                <p class="section-desc">Инструменты, которые реально помогают — от выбора профессии до получения места в
+                    вузе</p>
+            </div>
+            <div class="features-grid">
+
+                <div class="feature-card feature-highlight" id="feat-navigator">
+                    <div class="feature-header-row">
+                        <div class="feature-emoji">🧭</div>
+                        <div class="feature-pill">Ключевая функция</div>
+                    </div>
+                    <h3 class="feature-title">Навигатор специальностей</h3>
+                    <p class="feature-desc">Полный каталог всех профессий Казахстана с описанием, средними зарплатами,
+                        перечнем профильных предметов ЕНТ и прогнозом востребованности через 4–5 лет.</p>
+                    <div class="feature-tags">
+                        <span class="f-tag">500+ профессий</span>
+                        <span class="f-tag">Зарплаты</span>
+                        <span class="f-tag">Рынок труда</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" id="feat-calc">
+                    <div class="feature-emoji">📊</div>
+                    <h3 class="feature-title">Калькулятор шансов на грант</h3>
+                    <p class="feature-desc">Умный алгоритм учитывает баллы ЕНТ, квоты (сельская, многодетные и др.) и
+                        показывает вероятность поступления в конкретный вуз на грант.</p>
+                    <div class="feature-tags">
+                        <span class="f-tag">Все квоты</span>
+                        <span class="f-tag">По вузам</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" id="feat-rating">
+                    <div class="feature-emoji">🏛️</div>
+                    <h3 class="feature-title">Рейтинг вузов</h3>
+                    <p class="feature-desc">Фильтруемый чарт — не просто список, а аналитика по трудоустройству
+                        выпускников, качеству общежитий и стоимости обучения на контракте.</p>
+                    <div class="feature-tags">
+                        <span class="f-tag">Трудоустройство</span>
+                        <span class="f-tag">Условия</span>
+                    </div>
+                </div>
+
+
+                <div class="feature-card feature-highlight-2" id="feat-calendar">
+                    <div class="feature-header-row">
+                        <div class="feature-emoji">📅</div>
+                        <div class="feature-pill feature-pill-blue">Push-уведомления</div>
+                    </div>
+                    <h3 class="feature-title">Календарь абитуриента</h3>
+                    <p class="feature-desc">Не пропусти ни одного дедлайна. Уведомления о сроках подачи документов,
+                        апелляциях, выходе списков грантов и итогов конкурса.</p>
+                    <div class="feature-tags">
+                        <span class="f-tag">Сроки</span>
+                        <span class="f-tag">Апелляции</span>
+                        <span class="f-tag">Списки грантов</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" id="feat-blog">
+                    <div class="feature-emoji">📰</div>
+                    <h3 class="feature-title">Блог и новости МНВО</h3>
+                    <p class="feature-desc">Актуальные обновления от Министерства науки и высшего образования РК,
+                        правила приёма, советы экспертов и истории успеха студентов.</p>
+                    <div class="feature-tags">
+                        <span class="f-tag">МНВО РК</span>
+                        <span class="f-tag">Советы</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ TARGET AUDIENCE ═══════════ -->
+    <section class="audience" id="audience">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Для кого платформа</p>
+                <h2 class="section-title">Кому подходит<br />Talapker Navigator?</h2>
+                <p class="section-desc">Три ключевых сегмента — у каждого свои задачи, и мы решаем каждую</p>
+            </div>
+            <div class="audience-grid">
+
+                <div class="audience-card" id="aud-student">
+                    <div class="aud-icon-wrap"
+                        style="background: linear-gradient(135deg,rgba(79,70,229,0.15),rgba(79,70,229,0.05)); border-color: rgba(79,70,229,0.2);">
+                        <span class="aud-icon">🎓</span>
+                    </div>
+                    <h3 class="aud-title">Абитуриенты</h3>
+                    <p class="aud-desc">Выпускники 11 классов, которые хотят поступить на грант, выбрать «правильную»
+                        специальность и не запутаться в системе ЕНТ.</p>
+                    <ul class="aud-list">
+                        <li>Поиск гранта по баллам</li>
+                        <li>Подготовка к ЕНТ онлайн</li>
+                        <li>Выбор востребованной профессии</li>
+                        <li>Подача документов через egov / НЦТ</li>
+                    </ul>
+                </div>
+
+                <div class="audience-card audience-card-featured" id="aud-parent">
+                    <div class="aud-featured-badge">Самая популярная аудитория</div>
+                    <div class="aud-icon-wrap"
+                        style="background: linear-gradient(135deg,rgba(245,200,66,0.15),rgba(232,160,32,0.05)); border-color: rgba(245,200,66,0.3);">
+                        <span class="aud-icon">👨‍👩‍👧</span>
+                    </div>
+                    <h3 class="aud-title">Родители</h3>
+                    <p class="aud-desc">Мамы и папы, которые хотят понять: грант или контракт? Какой вуз лучше?
+                        Безопасно ли общежитие? Во сколько обойдётся образование?</p>
+                    <ul class="aud-list">
+                        <li>Финансовое планирование (грант vs контракт)</li>
+                        <li>Рейтинг вузов по условиям проживания</li>
+                        <li>Престиж и перспективы специальности</li>
+                        <li>Юридические тонкости поступления</li>
+                    </ul>
+                </div>
+
+                <div class="audience-card" id="aud-teacher">
+                    <div class="aud-icon-wrap"
+                        style="background: linear-gradient(135deg,rgba(16,185,129,0.15),rgba(16,185,129,0.05)); border-color: rgba(16,185,129,0.2);">
+                        <span class="aud-icon">👩‍🏫</span>
+                    </div>
+                    <h3 class="aud-title">Учителя & профориентаторы</h3>
+                    <p class="aud-desc">Классные руководители и специалисты по профориентации, которые консультируют
+                        учеников и помогают им ориентироваться в образовательной системе.</p>
+                    <ul class="aud-list">
+                        <li>Мониторинг успехов нескольких учеников</li>
+                        <li>Инструмент для групповых консультаций</li>
+                        <li>Актуальная база специальностей</li>
+                        <li>Отслеживание дедлайнов для класса</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ UNIVERSITIES ═══════════ -->
+    <section class="universities" id="universities">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">База вузов</p>
+                <h2 class="section-title">Топ университетов<br />Казахстана</h2>
+                <p class="section-desc">Фильтруй по специализации, рейтингу, стоимости и условиям общежития</p>
+            </div>
+
+            <!-- Filter tabs -->
+            <div class="uni-filters" id="uni-filters">
+                <button class="filter-btn active" data-filter="all" id="filter-all">Все города</button>
+                <button class="filter-btn" data-filter="astana" id="filter-astana">🏙️ Астана</button>
+                <button class="filter-btn" data-filter="almaty" id="filter-almaty">🌆 Алматы</button>
+                <button class="filter-btn" data-filter="it" id="filter-it">💻 IT-вузы</button>
+                <button class="filter-btn" data-filter="top" id="filter-top">🏆 Топ-3</button>
+            </div>
+
+            <div class="uni-grid" id="uni-grid">
+
+                <div class="uni-card" data-city="astana" data-type="top" id="uni-nu">
+                    <div class="uni-badge top">🏆 #1</div>
+                    <div class="uni-card-header">
+                        <div class="uni-logo" style="background:linear-gradient(135deg,#003580,#0069d9)">НУ</div>
+                        <div class="uni-meta">
+                            <h4 class="uni-name">Назарбаев Университет</h4>
+                            <p class="uni-city">🏙️ Астана</p>
+                        </div>
+                    </div>
+                    <div class="uni-info">
+                        <div class="uni-tags"><span class="uni-tag">Международный</span><span
+                                class="uni-tag">Гранты</span></div>
+                        <div class="uni-score"><span class="score-label">Мин. балл:</span><span
+                                class="score-val">120</span></div>
+                    </div>
+                    <a href="#" class="btn btn-sm" style="margin-top:8px">Подробнее</a>
+                </div>
+
+                <div class="uni-card" data-city="almaty" data-type="top" id="uni-kaznu">
+                    <div class="uni-badge">⭐ #2</div>
+                    <div class="uni-card-header">
+                        <div class="uni-logo" style="background:linear-gradient(135deg,#1a0050,#7209b7)">ҚазҰУ</div>
+                        <div class="uni-meta">
+                            <h4 class="uni-name">КазНУ им. аль-Фараби</h4>
+                            <p class="uni-city">🌆 Алматы</p>
+                        </div>
+                    </div>
+                    <div class="uni-info">
+                        <div class="uni-tags"><span class="uni-tag">Национальный</span><span class="uni-tag">500+
+                                программ</span></div>
+                        <div class="uni-score"><span class="score-label">Мин. балл:</span><span
+                                class="score-val">85</span></div>
+                    </div>
+                    <a href="#" class="btn btn-sm" style="margin-top:8px">Подробнее</a>
+                </div>
+
+                <div class="uni-card" data-city="astana" data-type="top" id="uni-enu">
+                    <div class="uni-badge">⭐ #3</div>
+                    <div class="uni-card-header">
+                        <div class="uni-logo" style="background:linear-gradient(135deg,#004d00,#2d9e2d)">ЕНУ</div>
+                        <div class="uni-meta">
+                            <h4 class="uni-name">ЕНУ им. Гумилёва</h4>
+                            <p class="uni-city">🏙️ Астана</p>
+                        </div>
+                    </div>
+                    <div class="uni-info">
+                        <div class="uni-tags"><span class="uni-tag">Национальный</span><span
+                                class="uni-tag">Гранты</span></div>
+                        <div class="uni-score"><span class="score-label">Мин. балл:</span><span
+                                class="score-val">80</span></div>
+                    </div>
+                    <a href="#" class="btn btn-sm" style="margin-top:8px">Подробнее</a>
+                </div>
+
+                <div class="uni-card" data-city="almaty" data-type="it" id="uni-kbtu">
+                    <div class="uni-badge">💡 IT</div>
+                    <div class="uni-card-header">
+                        <div class="uni-logo" style="background:linear-gradient(135deg,#7c0000,#dc143c)">КБТУ</div>
+                        <div class="uni-meta">
+                            <h4 class="uni-name">Казахстанско-Британский ТУ</h4>
+                            <p class="uni-city">🌆 Алматы</p>
+                        </div>
+                    </div>
+                    <div class="uni-info">
+                        <div class="uni-tags"><span class="uni-tag">IT</span><span class="uni-tag">Бизнес</span></div>
+                        <div class="uni-score"><span class="score-label">Мин. балл:</span><span
+                                class="score-val">95</span></div>
+                    </div>
+                    <a href="#" class="btn btn-sm" style="margin-top:8px">Подробнее</a>
+                </div>
+
+                <div class="uni-card" data-city="almaty" data-type="it" id="uni-iitu">
+                    <div class="uni-badge">💻 Tech</div>
+                    <div class="uni-card-header">
+                        <div class="uni-logo" style="background:linear-gradient(135deg,#0d47a1,#1976d2)">МУИТ</div>
+                        <div class="uni-meta">
+                            <h4 class="uni-name">Международный ун-т IT</h4>
+                            <p class="uni-city">🌆 Алматы</p>
+                        </div>
+                    </div>
+                    <div class="uni-info">
+                        <div class="uni-tags"><span class="uni-tag">IT</span><span class="uni-tag">Инновации</span>
+                        </div>
+                        <div class="uni-score"><span class="score-label">Мин. балл:</span><span
+                                class="score-val">70</span></div>
+                    </div>
+                    <a href="#" class="btn btn-sm" style="margin-top:8px">Подробнее</a>
+                </div>
+
+                <div class="uni-card" data-city="astana" data-type="it" id="uni-aitu">
+                    <div class="uni-badge">🚀 New</div>
+                    <div class="uni-card-header">
+                        <div class="uni-logo" style="background:linear-gradient(135deg,#1a1a2e,#16213e)">AITU</div>
+                        <div class="uni-meta">
+                            <h4 class="uni-name">Astana IT University</h4>
+                            <p class="uni-city">🏙️ Астана</p>
+                        </div>
+                    </div>
+                    <div class="uni-info">
+                        <div class="uni-tags"><span class="uni-tag">AI & Data</span><span
+                                class="uni-tag">Современный</span></div>
+                        <div class="uni-score"><span class="score-label">Мин. балл:</span><span
+                                class="score-val">90</span></div>
+                    </div>
+                    <a href="#" class="btn btn-sm" style="margin-top:8px">Подробнее</a>
+                </div>
+
+            </div>
+
+            <div class="uni-cta">
+                <a href="#" class="btn btn-outline btn-lg" id="view-all-uni-btn">Смотреть все 120+ университетов →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ PRICING ═══════════ -->
+    <section class="pricing" id="pricing">
+        <div class="pricing-bg">
+            <div class="orb orb-gold-big"></div>
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Прайс-лист услуг</p>
+                <h2 class="section-title">«Talapker Navigator»<br />жобасы бойынша прайс-лист</h2>
+                <p class="section-desc">Выбери нужную услугу или получи полное сопровождение по специальной цене</p>
+            </div>
+
+            <div class="pricing-grid">
+
+                <!-- Service 1 -->
+                <div class="price-card" id="price-1">
+                    <div class="price-card-top">
+                        <div class="price-num">01</div>
+                        <div class="price-emoji">🧠</div>
+                    </div>
+                    <h3 class="price-title">Проф-диагностика</h3>
+                    <p class="price-kaz">Кәсіби диагностика</p>
+                    <p class="price-desc">
+                        Приём абитуриента и родителей. Определяем способности и интересы ребёнка через платформы
+                        <strong>Kasip.kz</strong> и <strong>Edunavigator</strong> и помогаем выбрать подходящую
+                        специальность.
+                    </p>
+                    <div class="price-amount">
+                        <span class="price-value">30 000</span>
+                        <span class="price-currency">₸</span>
+                    </div>
+                    <a href="#contact" class="btn btn-outline price-btn">Записаться</a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="price-card" id="price-2">
+                    <div class="price-card-top">
+                        <div class="price-num">02</div>
+                        <div class="price-emoji">📊</div>
+                    </div>
+                    <h3 class="price-title">ЕНТ балл аналитикасы</h3>
+                    <p class="price-kaz">Аналитика баллов ЕНТ</p>
+                    <p class="price-desc">
+                        На основе баллов ЕНТ составляем <strong>4 правильные комбинации</strong> вуза и специальности
+                        с учётом грантовой квоты — максимизируем шансы на бесплатное обучение.
+                    </p>
+                    <div class="price-amount">
+                        <span class="price-value">30 000</span>
+                        <span class="price-currency">₸</span>
+                    </div>
+                    <a href="#contact" class="btn btn-outline price-btn">Записаться</a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="price-card" id="price-3">
+                    <div class="price-card-top">
+                        <div class="price-num">03</div>
+                        <div class="price-emoji">📋</div>
+                    </div>
+                    <h3 class="price-title">Конкурсқа өтінім беру</h3>
+                    <p class="price-kaz">Подача заявки на конкурс</p>
+                    <p class="price-desc">
+                        Помогаем подать документы и выборы через <strong>egov</strong> или платформу
+                        <strong>НЦТ</strong>
+                        с учётом всех квот и правил — строго по стратегии гранта.
+                    </p>
+                    <div class="price-amount">
+                        <span class="price-value">20 000</span>
+                        <span class="price-currency">₸</span>
+                    </div>
+                    <a href="#contact" class="btn btn-outline price-btn">Записаться</a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="price-card" id="price-4">
+                    <div class="price-card-top">
+                        <div class="price-num">04</div>
+                        <div class="price-emoji">🎓</div>
+                    </div>
+                    <h3 class="price-title">Оқуға түсу</h3>
+                    <p class="price-kaz">Поступление в университет</p>
+                    <p class="price-desc">
+                        Консультация после конкурса: выбор вуза из списка, оформление документов, помощь с
+                        акимовскими/корпоративными грантами для тех, кто не добрал баллов.
+                    </p>
+                    <div class="price-amount">
+                        <span class="price-value">20 000</span>
+                        <span class="price-currency">₸</span>
+                    </div>
+                    <a href="#contact" class="btn btn-outline price-btn">Записаться</a>
+                </div>
+
+                <!-- Service 5 — Featured -->
+                <div class="price-card price-featured" id="price-5">
+                    <div class="price-featured-badge">⭐ Лучший выбор</div>
+                    <div class="price-card-top">
+                        <div class="price-num price-num-gold">05</div>
+                        <div class="price-emoji">🚀</div>
+                    </div>
+                    <h3 class="price-title">Толық сүймелдеу</h3>
+                    <p class="price-kaz">Полное сопровождение</p>
+                    <p class="price-desc">
+                        Сопровождаем абитуриента от первой консультации до выхода приказа «Поступил».
+                        Включает все 4 услуги выше + личный куратор + приоритетная поддержка 24/7.
+                    </p>
+                    <div class="price-includes">
+                        <p class="includes-label">Включает:</p>
+                        <ul>
+                            <li>✓ Профдиагностика</li>
+                            <li>✓ Аналитика баллов ЕНТ</li>
+                            <li>✓ Подача документов</li>
+                            <li>✓ Сопровождение до зачисления</li>
+                            <li>✓ Личный куратор</li>
+                            <li>✓ Доступ в закрытый канал с полезными новостями (ЕНТ, гранты, изменения, сроки)</li>
+                            <li>✓ Прямая работа с экспертом</li>
+                            <li>✓ Система, ориентированная на результат — 100% результат</li>
+                        </ul>
+                    </div>
+                    <div class="price-amount price-amount-gold">
+                        <div class="price-discount-badge">-60%</div>
+                        <div class="price-old">150 000 ₸</div>
+                        <div class="price-current">
+                            <span class="price-value" id="featured-price-val">60 000</span>
+                            <span class="price-currency">₸</span>
+                        </div>
+                    </div>
+
+                    <div class="price-timer-box" id="price-timer-box">
+                        <p class="timer-label">До конца акции осталось:</p>
+                        <div class="timer-display" id="pricing-countdown">
+                            <div class="timer-unit"><span id="days">00</span><small>дн</small></div>
+                            <div class="timer-unit"><span id="hours">00</span><small>час</small></div>
+                            <div class="timer-unit"><span id="minutes">00</span><small>мин</small></div>
+                            <div class="timer-unit"><span id="seconds">00</span><small>сек</small></div>
+                        </div>
+                        <p class="timer-note">С 20 марта цена вернется к 150 000 ₸</p>
+                    </div>
+
+                    <a href="#contact" class="btn btn-primary price-btn price-btn-gold" id="price-full-btn">Записаться
+                        сейчас</a>
+                </div>
+
+            </div>
+
+            <div class="pricing-note">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <circle cx="9" cy="9" r="8" stroke="#F5C842" stroke-width="1.5" />
+                    <path d="M9 8v5M9 6v.5" stroke="#F5C842" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+                <p>Все услуги предоставляются на казахском и русском языках. Консультация — очно или онлайн. <a
+                        href="#contact">Свяжитесь с нами</a> для персонального расчёта.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ HOW IT WORKS ═══════════ -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Процесс работы</p>
+                <h2 class="section-title">4 шага до<br />места в вузе</h2>
+            </div>
+            <div class="steps-container">
+                <div class="steps-line"></div>
+                <div class="step" id="step-1">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <div class="step-icon">🧭</div>
+                        <h3 class="step-title">Профдиагностика</h3>
+                        <p class="step-desc">Определяем интересы и склонности абитуриента. Используем платформы Kasip.kz
+                            и Edunavigator.</p>
+                    </div>
+                </div>
+                <div class="step" id="step-2">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <div class="step-icon">📊</div>
+                        <h3 class="step-title">Аналитика ЕНТ</h3>
+                        <p class="step-desc">Составляем 4 оптимальные комбинации вуз + специальность с максимальным
+                            шансом на грант.</p>
+                    </div>
+                </div>
+                <div class="step" id="step-3">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <div class="step-icon">📋</div>
+                        <h3 class="step-title">Подача документов</h3>
+                        <p class="step-desc">Сопровождаем при подаче заявки через egov или НЦТ с учётом всех квот и
+                            правил конкурса.</p>
+                    </div>
+                </div>
+                <div class="step" id="step-4">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <div class="step-icon">🎓</div>
+                        <h3 class="step-title">Зачисление!</h3>
+                        <p class="step-desc">Помогаем оформить документы, получить приказ о зачислении и подготовиться к
+                            студенческой жизни.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ STATS ═══════════ -->
+    <section class="stats-section" id="stats">
+        <div class="stats-bg">
+            <div class="orb orb-gold"></div>
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Наш результат</p>
+                <h2 class="section-title" style="color:#fff">Цифры говорят<br />сами за себя</h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card" id="stat-1">
+                    <div class="stat-icon">🎓</div>
+                    <div class="stat-big" data-target="20000">0</div>
+                    <div class="stat-plus">+</div>
+                    <p class="stat-text">Абитуриентов<br />воспользовались платформой</p>
+                </div>
+                <div class="stat-card" id="stat-2">
+                    <div class="stat-icon">🏛️</div>
+                    <div class="stat-big" data-target="120">0</div>
+                    <div class="stat-plus">+</div>
+                    <p class="stat-text">Университетов<br />в базе данных</p>
+                </div>
+                <div class="stat-card" id="stat-3">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-big" data-target="500">0</div>
+                    <div class="stat-plus">+</div>
+                    <p class="stat-text">Специальностей<br />для выбора</p>
+                </div>
+                <div class="stat-card" id="stat-4">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-big" data-target="92">0</div>
+                    <div class="stat-plus">%</div>
+                    <p class="stat-text">Клиентов поступили<br />на грант</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ TESTIMONIALS ═══════════ -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Отзывы</p>
+                <h2 class="section-title">Что говорят<br />наши клиенты</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" id="review-1">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Благодаря профдиагностике я наконец поняла, чего хочу. Поступила на грант в
+                        AITU на Data Science! Аналитика баллов была просто огонь — точно угадали комбинацию."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar" style="background:linear-gradient(135deg,#7F00FF,#E100FF)">А</div>
+                        <div>
+                            <p class="reviewer-name">Айгерим Бекова</p>
+                            <p class="reviewer-role">Студентка AITU · Грант 2024</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card featured" id="review-2">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Выбрал полное сопровождение — и ни разу не пожалел. Куратор помог на каждом
+                        шагу. Сейчас учусь в КБТУ на IT. Если бы не Navigator — точно бы запутался в egov."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar" style="background:linear-gradient(135deg,#F5C842,#E8A020)">Д</div>
+                        <div>
+                            <p class="reviewer-name">Даниял Сейткали</p>
+                            <p class="reviewer-role">Студент КБТУ · Полное сопровождение</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" id="review-3">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Как мама, я была в панике. Navigator объяснил всё про квоты и гранты простым
+                        языком. Дочь поступила на грант в КазНУ. Спасибо за терпение и профессионализм!"</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar" style="background:linear-gradient(135deg,#00c6ff,#0072ff)">З</div>
+                        <div>
+                            <p class="reviewer-name">Зарина Нурланова</p>
+                            <p class="reviewer-role">Родитель студентки КазНУ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ CONTACT ═══════════ -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p class="section-eyebrow">Записаться на консультацию</p>
+                    <h2 class="contact-title">Начни свой путь<br />к гранту сегодня</h2>
+                    <p class="contact-desc">Оставь заявку — мы свяжемся с тобой в течение часа и ответим на все вопросы
+                        о поступлении.</p>
+                    <div class="contact-links">
+                        <a href="mailto:talapker.navigator@mail.ru" class="contact-link" id="contact-email">
+                            <span class="contact-link-icon">✉️</span>talapker.navigator@mail.ru
+                        </a>
+                        <a href="https://t.me/Talapker_Navigator" target="_blank" class="contact-link" id="contact-tg">
+                            <span class="contact-link-icon">📱</span>Talapker Navigator (Telegram)
+                        </a>
+                        <a href="https://instagram.com/Talapker.navigator" target="_blank" class="contact-link"
+                            id="contact-insta">
+                            <span class="contact-link-icon">📸</span>Talapker.navigator (Instagram)
+                        </a>
+                        <a href="https://wa.me/77080199454" target="_blank" class="contact-link" id="contact-whatsapp">
+                            <span class="contact-link-icon">💬</span>87080199454 (WhatsApp)
+                        </a>
+                    </div>
+                    <div class="contact-langs">
+                        <span class="lang-badge">🇰🇿 Қазақша</span>
+                        <span class="lang-badge">🇷🇺 Русский</span>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cf-name" class="form-label">Имя</label>
+                            <input type="text" id="cf-name" class="form-input" placeholder="Твоё имя" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="cf-phone" class="form-label">Телефон / WhatsApp</label>
+                            <input type="tel" id="cf-phone" class="form-input" placeholder="+7 (___) ___-__-__" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-service" class="form-label">Интересующая услуга</label>
+                        <select id="cf-service" class="form-input form-select">
+                            <option value="">— Выберите услугу —</option>
+                            <option value="1">Профдиагностика — 30 000 ₸</option>
+                            <option value="2">ЕНТ балл аналитикасы — 30 000 ₸</option>
+                            <option value="3">Конкурсқа өтінім беру — 20 000 ₸</option>
+                            <option value="4">Оқуға түсу — 20 000 ₸</option>
+                            <option value="5">Толық сүймелдеу (полное сопровождение) — 60 000 ₸</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-message" class="form-label">Вопрос или сообщение</label>
+                        <textarea id="cf-message" class="form-input form-textarea" placeholder="Напиши свой вопрос..."
+                            rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg" id="contact-submit-btn" style="width:100%">
+                        Отправить заявку
+                    </button>
+                    <p class="form-success" id="form-success-msg" style="display:none">✅ Заявка отправлена! Мы свяжемся
+                        с вами в течение часа.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo" id="footer-logo">
+                        <div class="logo-icon">
+                            <img src="assets/logo.png" alt="Talapker Navigator" class="logo-img" />
+                        </div>
+                        <span class="logo-text">Talapker <span class="logo-accent">Navigator</span></span>
+                    </a>
+                    <p class="footer-tagline">Болашаққа жол сілтеуші —<br />EdTech-навигатор для абитуриентов Казахстана
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://t.me/Talapker_Navigator" target="_blank" class="social-btn" id="footer-tg"
+                            aria-label="Telegram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/Talapker.navigator" target="_blank" class="social-btn"
+                            id="footer-inst" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/77080199454" target="_blank" class="social-btn" id="footer-wa"
+                            aria-label="WhatsApp">
+                            <span style="font-size: 18px;">💬</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links-grid">
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Платформа</h4>
+                        <ul>
+                            <li><a href="#features">Возможности</a></li>
+                            <li><a href="#universities">Вузы</a></li>
+                            <li><a href="#how-it-works">Как мы работаем</a></li>
+                            <li><a href="#stats">Статистика</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Услуги</h4>
+                        <ul>
+                            <li><a href="#pricing">Профдиагностика</a></li>
+                            <li><a href="#pricing">Аналитика ЕНТ</a></li>
+                            <li><a href="#pricing">Подача документов</a></li>
+                            <li><a href="#pricing">Полное сопровождение</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Компания</h4>
+                        <ul>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Блог</a></li>
+                            <li><a href="#contact">Контакты</a></li>
+                            <li><a href="#">Партнёрство</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Talapker Navigator. Барлық құқықтар қорғалған.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Конфиденциальность</a>
+                    <a href="#">Условия использования</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
